@@ -1,0 +1,510 @@
+/* 全体のスタイル */
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+body {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    background-color: #E9ECF0;
+    background-size: 100%;
+    background-repeat: repeat;
+    text-align: center;
+    line-height: 1.2;
+}
+
+
+main {
+    padding: 0 3vw;
+    max-width: 1144px;
+    margin: auto;
+}
+
+
+
+
+h1 {
+    font-family: 'Alata', sans-serif;
+    border-bottom: 1px solid;
+    font-size: 3em;
+
+}
+
+.nto {
+    font-family: 'Noto Serif JP', serif;
+    ;
+    border-bottom: none;
+}
+
+section h2 {
+    border-bottom: 1px solid;
+    text-align: start;
+    font-size: 1.5em;
+    margin: 0.7em 0;
+}
+
+p {
+    word-break: auto-phrase;
+}
+
+
+
+
+.ala {
+    font-family: 'Alata', sans-serif;
+}
+
+.cent {
+    text-align: center;
+}
+
+.pagelist {
+    display: flex;
+    justify-content: center;
+    pointer-events: all;
+}
+
+.nowpage{
+    color: #8d8d8d;
+    pointer-events: none;
+}
+.back{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: #3a3a3a;
+    margin: 1em;
+}
+
+
+/* ヘッダースタイル */
+.fce {
+    margin-bottom: 2em;
+}
+
+
+.fce img {
+    display: block;
+    margin: auto;
+    width: 80%;
+    padding-top: 2em;
+}
+
+
+.tp {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    color: #585858;
+}
+
+
+
+.swiper {
+    padding: 0;
+    line-height: 0;
+
+}
+
+
+.swiper-slide {
+    background-color: #585858;
+
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    --swiper-navigation-color: #FCAE30;
+
+}
+
+.swiper-pagination-bullet {
+    background-color: #FCAE30;
+}
+
+
+/* ナビゲーションスタイル */
+header {
+    font-family: 'Alata', sans-serif;
+    font-size: 3vw;
+    background-color: #FCAE30;
+
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+
+    height: 10vh;
+    z-index: 200;
+}
+
+header img {
+    filter: brightness(0) invert(1);
+    width: 30vh;
+    margin-left: 2vw;
+}
+
+ul a {
+    text-decoration: none;
+    padding: 0 0.8em;
+    justify-content: flex-end;
+    color: #3a3a3a;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    z-index: 10;
+
+    pointer-events: none
+}
+
+
+#overlayMenu {
+    padding-top: 32vh;
+
+}
+
+#overlayMenu li a {
+    font-size: 4vh;
+    padding: 2vh;
+}
+
+#overlayMenu li a:hover {
+    background: #000;
+    color: #fff;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+
+
+.overlay {
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    transition: opacity 0.3s ease;
+    align-items: center;
+    z-index: 100;
+}
+
+.overlay img {
+    color: #000;
+
+}
+
+.overlay a {
+    padding-top: 10vh;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #3b3b3b;
+
+}
+
+.overlay button#closeMenu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.btnpad {
+    margin-right: 1px;
+}
+
+.btn-trigger {
+    cursor: pointer;
+    position: absolute;
+    left: calc(100% - 70px);
+}
+
+.btn-trigger span {
+    display: block;
+    width: 40px;
+    height: 5px;
+    margin: 9px 0;
+    background: #ffffff;
+    transition: 0.4s;
+}
+
+.btn-trigger.active span:nth-of-type(1) {
+    transform: translateY(14px) rotate(45deg);
+}
+
+.btn-trigger.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.btn-trigger.active span:nth-of-type(3) {
+    transform: translateY(-14px) rotate(-45deg);
+}
+
+
+.youtube {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.youtube iframe {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* メインコンテンツスタイル */
+.nws {
+    margin-bottom: 1em;
+}
+
+.nws p {
+    width: auto;
+    border-bottom: 1px solid;
+    border-color: #adadad;
+    padding: 4px 0;
+}
+
+.resp {
+    display: flex;
+}
+
+.resp section {
+    justify-content: space-between;
+}
+
+
+.imlsh {
+    padding: 1em;
+    object-position: 41% 18%;
+    width: 50%;
+    height: 75%;
+    object-fit: none;
+    transition: opacity 0.3s ease;
+    clip-path: polygon(5rem 0px, 100% 0px, 100% calc(100% - 3rem), calc(100% - 5rem) 100%, 0px 100%, 0px 3rem);
+}
+
+
+
+section {
+    margin: 1vh;
+    background-color: #ffffff;
+    clip-path: polygon(5rem 0px, 100% 0px, 100% calc(100% - 3rem), calc(100% - 5rem) 100%, 0px 100%, 0px 3rem);
+}
+
+section p {
+    padding: 1em 0;
+}
+
+article {
+    padding: 1.2em 3vw;
+    text-align: start;
+}
+
+
+.dscr {
+    padding: 1vh 3vw;
+}
+
+
+.imlink {
+    font-family: 'Alata', sans-serif;
+}
+
+
+#logo-corp {
+    width: 50%;
+    padding: 30px;
+}
+
+.original-gradient {
+    height: 100px;
+    width: 90%;
+    background-image: linear-gradient(141deg, rgba(61, 200, 194, 0.44), rgba(117, 206, 120, 0.44) 28%, rgba(177, 213, 39, 0.44) 51%, rgba(206, 216, 0, 0.44) 52%, rgba(231, 195, 35, 0.44) 52%, rgba(255, 174, 68, 0.44) 59%, rgba(234, 114, 0, 0.44));
+}
+
+
+/* フッタースタイル */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 3em;
+    text-align: center;
+}
+
+/* contents */
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 1em 0;
+    row-gap: 1em;
+    column-gap: 1em;
+}
+
+.grid div {
+    padding: 0.5em;
+    clip-path: polygon(2rem 0px, 100% 0px, 100% calc(100% - 1rem), calc(100% - 2rem) 100%, 0px 100%, 0px 1rem);
+    background-color: #fff;
+}
+
+.grid img {
+    clip-path: polygon(2rem 0px, 100% 0px, 100% calc(100% - 1rem), calc(100% - 2rem) 100%, 0px 100%, 0px 1rem);
+}
+
+.grid div a {
+    text-decoration: none;
+    color: #3b3b3b;
+}
+
+.grid h2 {
+    margin-left: 2vw;
+    text-align: left;
+}
+
+.cell {
+    clip-path: polygon(5rem 0px, 100% 0px, 100% calc(100% - 3rem), calc(100% - 5rem) 100%, 0px 100%, 0px 3rem);
+    width: 100%;
+}
+
+.cell:hover {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.grid .blank {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.grid .blank img {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* interview */
+
+.thumbnail{
+    object-fit: cover;
+    height: 14em;
+    width: 100%;
+}
+.intvw{
+    color: #727272;
+}
+/* paragraph */
+.para{
+    clip-path: polygon(2.5rem 0px, 100% 0px, 100% calc(100% - 1.5rem), calc(100% - 2.5rem) 100%, 0px 100%, 0px 1.5rem);
+    padding: 6vw;
+}
+.para h2{
+    margin-bottom: 0px;
+}
+/*linkbutton */
+.snsx,
+.hp,
+.px,
+.yt {
+    font-family: 'Alata', sans-serif;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 0 10px;
+    border-radius: 9999px;
+}
+
+.hp {
+    background-color: #FCAE30;
+}
+
+.snsx {
+    background-color: #000;
+
+}
+
+.yt {
+    background-color: #FF0000;
+}
+
+.px {
+    background-color: #0096FA;
+}
+
+/* linkbox */
+
+button a{
+    text-decoration: none;
+}
+
+.linkbox{
+    display: flex;
+    padding: 0.5em;
+    height: 10em;
+    width: 30em;
+    box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.4);
+    margin-left: auto;
+    margin-right: auto;
+    color: #000;
+
+}
+.linkbox h1{
+    font-size: 2em;
+}
+.linkbox div{
+    padding: 1em;
+    flex: 1;
+}
+.linkbox img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.linkbox p{
+    font-size: 0.9em;
+    color: #a5a5a5;
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    max-height: 3.6em;
+}
+
+
+@media screen and (max-width: 740px) {
+    .resp {
+        flex-wrap: wrap;
+    }
+
+    .imlsh {
+        width: 100%;
+        height: 40%;
+        padding: 0;
+    }
+
+    .swiper img {
+        width: 100%;
+    }
+
+    #logo-corp {
+        width: 80%;
+
+    }
+
+
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .linkbox{
+        width: auto;
+    }
+
+    .interviewTop{
+        font-size: 2em;
+    }
+}
